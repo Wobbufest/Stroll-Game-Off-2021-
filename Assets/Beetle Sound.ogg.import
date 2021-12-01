@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Beetle Sound.ogg-2939648e519747e2028fe8f47a2e3c37.oggstr"
+
+[deps]
+
+source_file="res://Assets/Beetle Sound.ogg"
+dest_files=[ "res://.import/Beetle Sound.ogg-2939648e519747e2028fe8f47a2e3c37.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0
