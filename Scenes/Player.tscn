@@ -1,0 +1,337 @@
+[gd_scene load_steps=48 format=2]
+
+[ext_resource path="res://Scenes/Player.gd" type="Script" id=1]
+[ext_resource path="res://Assets/Walking 0 (South).png" type="Texture" id=2]
+[ext_resource path="res://Assets/Walking 0 (East).png" type="Texture" id=3]
+[ext_resource path="res://Assets/Walking 0 (Southeast).png" type="Texture" id=4]
+[ext_resource path="res://Assets/Walking 0 (North).png" type="Texture" id=5]
+[ext_resource path="res://Assets/Walking 0 (Northeast).png" type="Texture" id=6]
+[ext_resource path="res://Assets/Walking 2 (North).png" type="Texture" id=7]
+[ext_resource path="res://Assets/Walking 2 (East).png" type="Texture" id=8]
+[ext_resource path="res://Assets/Walking 2 (South).png" type="Texture" id=9]
+[ext_resource path="res://Assets/Walking 2 (Southeast).png" type="Texture" id=10]
+[ext_resource path="res://Assets/Walking 1 (Northeast).png" type="Texture" id=11]
+[ext_resource path="res://Assets/Walking 2 (Northeast).png" type="Texture" id=12]
+[ext_resource path="res://Assets/Walking 1 (South).png" type="Texture" id=13]
+[ext_resource path="res://Assets/Walking 1 (Southeast).png" type="Texture" id=14]
+[ext_resource path="res://Assets/Walking 1 (North).png" type="Texture" id=15]
+[ext_resource path="res://Assets/Walking 1 (East).png" type="Texture" id=16]
+[ext_resource path="res://Assets/Running 0 (East).png" type="Texture" id=17]
+[ext_resource path="res://Assets/Running 1 (East).png" type="Texture" id=18]
+[ext_resource path="res://Assets/Running 2 (East).png" type="Texture" id=19]
+[ext_resource path="res://Assets/Idle (East).png" type="Texture" id=20]
+[ext_resource path="res://Assets/Running 2 (South).png" type="Texture" id=21]
+[ext_resource path="res://Assets/Running 2 (North).png" type="Texture" id=22]
+[ext_resource path="res://Assets/Idle (Northeast).png" type="Texture" id=23]
+[ext_resource path="res://Assets/Running 1 (Southeast).png" type="Texture" id=24]
+[ext_resource path="res://Assets/Running 1 (South).png" type="Texture" id=25]
+[ext_resource path="res://Assets/Running 2 (Southeast).png" type="Texture" id=26]
+[ext_resource path="res://Assets/Running 1 (North).png" type="Texture" id=27]
+[ext_resource path="res://Assets/Running 0 (South).png" type="Texture" id=28]
+[ext_resource path="res://Assets/Running 2 (Northeast).png" type="Texture" id=29]
+[ext_resource path="res://Assets/Running 0 (Northeast).png" type="Texture" id=30]
+[ext_resource path="res://Assets/Idle (North).png" type="Texture" id=31]
+[ext_resource path="res://Assets/Running 0 (North).png" type="Texture" id=32]
+[ext_resource path="res://Assets/Running 1 (Northeast).png" type="Texture" id=33]
+[ext_resource path="res://Assets/Running 0 (Southeast).png" type="Texture" id=34]
+[ext_resource path="res://Assets/Idle (Southeast).png" type="Texture" id=35]
+[ext_resource path="res://Assets/Idle (South).png" type="Texture" id=36]
+[ext_resource path="res://Assets/Ambient Sound.ogg" type="AudioStream" id=37]
+[ext_resource path="res://Assets/Footsteps Walking.ogg" type="AudioStream" id=38]
+[ext_resource path="res://Assets/Footsteps Running.ogg" type="AudioStream" id=39]
+[ext_resource path="res://Blood Splatter.png" type="Texture" id=40]
+[ext_resource path="res://Blood Splatter Sound.mp3" type="AudioStream" id=41]
+
+[sub_resource type="CylinderShape" id=1]
+radius = 0.5
+
+[sub_resource type="SpriteFrames" id=2]
+animations = [ {
+"frames": [ ExtResource( 2 ), ExtResource( 13 ), ExtResource( 9 ), ExtResource( 13 ) ],
+"loop": true,
+"name": "Walking (South)",
+"speed": 3.0
+}, {
+"frames": [ ExtResource( 28 ), ExtResource( 25 ), ExtResource( 21 ), ExtResource( 25 ) ],
+"loop": true,
+"name": "Running (South)",
+"speed": 6.0
+}, {
+"frames": [ ExtResource( 36 ) ],
+"loop": true,
+"name": "Idle (South)",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 6 ), ExtResource( 11 ), ExtResource( 12 ), ExtResource( 11 ) ],
+"loop": true,
+"name": "Walking (Northeast)",
+"speed": 3.0
+}, {
+"frames": [ ExtResource( 31 ) ],
+"loop": true,
+"name": "Idle (North)",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 23 ) ],
+"loop": true,
+"name": "Idle (Northeast)",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 17 ), ExtResource( 18 ), ExtResource( 19 ), ExtResource( 18 ) ],
+"loop": true,
+"name": "Running (East)",
+"speed": 6.0
+}, {
+"frames": [ ExtResource( 32 ), ExtResource( 27 ), ExtResource( 22 ), ExtResource( 27 ) ],
+"loop": true,
+"name": "Running (North)",
+"speed": 6.0
+}, {
+"frames": [ ExtResource( 4 ), ExtResource( 14 ), ExtResource( 10 ), ExtResource( 14 ) ],
+"loop": true,
+"name": "Walking (Southeast)",
+"speed": 3.0
+}, {
+"frames": [ ExtResource( 20 ) ],
+"loop": true,
+"name": "Idle (East)",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 3 ), ExtResource( 16 ), ExtResource( 8 ), ExtResource( 16 ) ],
+"loop": true,
+"name": "Walking (East)",
+"speed": 3.0
+}, {
+"frames": [ ExtResource( 35 ) ],
+"loop": true,
+"name": "Idle (Southeast)",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 5 ), ExtResource( 15 ), ExtResource( 7 ), ExtResource( 15 ) ],
+"loop": true,
+"name": "Walking (North)",
+"speed": 3.0
+}, {
+"frames": [ ExtResource( 30 ), ExtResource( 33 ), ExtResource( 29 ), ExtResource( 33 ) ],
+"loop": true,
+"name": "Running (Northeast)",
+"speed": 6.0
+}, {
+"frames": [ ExtResource( 34 ), ExtResource( 24 ), ExtResource( 26 ), ExtResource( 24 ) ],
+"loop": true,
+"name": "Running (Southeast)",
+"speed": 6.0
+} ]
+
+[sub_resource type="Animation" id=3]
+resource_name = "Die"
+length = 8.0
+tracks/0/type = "value"
+tracks/0/path = NodePath("Blood Particles:emitting")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 3 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Blood:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 8 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, true ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Flashlight Pivot:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 8 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ false, false ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("AnimatedSprite3D:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 8 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ false, false ]
+}
+tracks/4/type = "audio"
+tracks/4/path = NodePath("Blood Splatter Sound")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"clips": [ {
+"end_offset": 0.0,
+"start_offset": 0.8,
+"stream": ExtResource( 41 )
+} ],
+"times": PoolRealArray( 0 )
+}
+
+[sub_resource type="Animation" id=6]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("Blood Particles:emitting")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ false ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Blood:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ true ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Flashlight Pivot:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ true ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("AnimatedSprite3D:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ true ]
+}
+
+[sub_resource type="SpatialMaterial" id=5]
+flags_transparent = true
+albedo_color = Color( 0.470588, 0, 0, 0.882353 )
+metallic = 0.17
+metallic_specular = 0.08
+roughness = 0.19
+emission_enabled = true
+emission = Color( 0.470588, 0, 0, 1 )
+emission_energy = 0.1
+emission_operator = 0
+emission_on_uv2 = false
+rim_enabled = true
+rim = 0.2
+rim_tint = 1.0
+
+[sub_resource type="SphereMesh" id=4]
+material = SubResource( 5 )
+radius = 0.125
+height = 0.25
+
+[node name="Player" type="KinematicBody" groups=["Player"]]
+collision_layer = 2
+script = ExtResource( 1 )
+
+[node name="CollisionShape" type="CollisionShape" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0 )
+shape = SubResource( 1 )
+
+[node name="Direction Pivot" type="Position3D" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0 )
+
+[node name="Flashlight Pivot" type="Position3D" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0 )
+
+[node name="SpotLight" type="SpotLight" parent="Flashlight Pivot"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.5 )
+light_energy = 2.0
+shadow_enabled = true
+shadow_bias = 0.01
+shadow_reverse_cull_face = true
+spot_range = 20.0
+spot_angle_attenuation = 0.5
+
+[node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="."]
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 1, 0 )
+modulate = Color( 0.454902, 0.454902, 0.454902, 1 )
+pixel_size = 0.0019
+frames = SubResource( 2 )
+animation = "Idle (North)"
+playing = true
+
+[node name="SpotLight" type="SpotLight" parent="."]
+transform = Transform( 1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 3, 0 )
+
+[node name="Listener" type="Listener" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0 )
+current = true
+
+[node name="Ambient Sound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 37 )
+volume_db = -6.0
+autoplay = true
+
+[node name="Footstep Walking Sounds" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 38 )
+volume_db = 6.0
+
+[node name="Footstep Running Sounds" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 39 )
+
+[node name="Blood Splatter Sound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 41 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/Die = SubResource( 3 )
+anims/RESET = SubResource( 6 )
+
+[node name="Blood Particles" type="CPUParticles" parent="."]
+emitting = false
+amount = 32
+lifetime = 3.0
+one_shot = true
+explosiveness = 0.9
+mesh = SubResource( 4 )
+direction = Vector3( 0, 1, 0 )
+spread = 22.5
+initial_velocity = 5.0
+initial_velocity_random = 0.5
+scale_amount_random = 0.5
+
+[node name="Blood" type="Sprite3D" parent="."]
+transform = Transform( 1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0.01, 0 )
+pixel_size = 0.003
+shaded = true
+texture = ExtResource( 40 )
